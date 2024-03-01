@@ -1,0 +1,6 @@
+package com.learning.core.day01;
+
+public class Book {
+	String bookTitle;
+	double bookPrice;
+}
