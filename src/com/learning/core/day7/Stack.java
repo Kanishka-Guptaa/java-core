@@ -122,38 +122,4 @@ public class Stack
 	     }
 	     System.out.println();
 	 }
-	 
-	 int evaluateExpression(String expression) 
-	 {
-		 Stack stack = new Stack(expression.length());
-	     for (int i = 0; i < expression.length(); i++) 
-	     {
-	    	 char ch = expression.charAt(i);
-	         if(Character.isDigit(ch)) 
-	         {
-	        	 stack.push(Character.getNumericValue(ch));
-	         } 
-	         else 
-	         {
-	        	 int operand1 = stack.pop();
-	             int operand2 = stack.pop();
-	             switch(ch) 
-	             {
-	             	case '+':
-	             		stack.push(operand1 + operand2);
-	                    break;
-	                case '-':
-	                	stack.push(operand1 - operand2);
-	                    break;
-	                case '*':
-	                    stack.push(operand1 * operand2);
-	                    break;
-	                case '/':
-	                    stack.push(operand1 / operand2);
-	                    break;
-	             }
-	         }
-	     }
-	     return stack.pop();
-	 }
 }
